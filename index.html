@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScriptのトレーニング</title>
+</head>
+
+<body class="area">
+    <!-- 背景のアニメーション用 -->
+    <ul class="circles">
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+        <li hidden></li>
+    </ul>
+
+    <h1 id="title"></h1>
+
+    <!-- ドロップダウンで選択 -->
+    <div class="select_div">
+        <select class="select" id="pref">
+            <option value="">都道府県を選択</option>
+            <option value="016000">北海道</option>
+            <optgroup label="東北">
+                <option value="020000">青森県</option>
+                <option value="050000">秋田県</option>
+                <option value="030000">岩手県</option>
+                <option value="060000">山形県</option>
+                <option value="040000">宮城県</option>
+                <option value="070000">福島県</option>
+            </optgroup>
+            <optgroup label="関東">
+                <option value="080000">茨城県</option>
+                <option value="090000">栃木県</option>
+                <option value="100000">群馬県</option>
+                <option value="110000">埼玉県</option>
+                <option value="120000">千葉県</option>
+                <option value="130000">東京都</option>
+                <option value="140000">神奈川県</option>
+            </optgroup>
+            <optgroup label="中部">
+                <option value="150000">新潟県</option>
+                <option value="160000">富山県</option>
+                <option value="170000">石川県</option>
+                <option value="180000">福井県</option>
+                <option value="190000">山梨県</option>
+                <option value="200000">長野県</option>
+                <option value="210000">岐阜県</option>
+                <option value="220000">静岡県</option>
+                <option value="230000">愛知県</option>
+            </optgroup>
+            <optgroup label="近畿">
+                <option value="240000">三重県</option>
+                <option value="250000">滋賀県</option>
+                <option value="260000">京都府</option>
+                <option value="270000">大阪府</option>
+                <option value="280000">兵庫県</option>
+                <option value="290000">奈良県</option>
+                <option value="300000">和歌山県</option>
+            </optgroup>
+            <optgroup label="中国">
+                <option value="330000">岡山県</option>
+                <option value="340000">広島県</option>
+                <option value="310000">鳥取県</option>
+                <option value="320000">島根県</option>
+                <option value="350000">山口県</option>
+            </optgroup>
+            <optgroup label="四国">
+                <option value="360000">徳島県</option>
+                <option value="370000">香川県</option>
+                <option value="380000">愛媛県</option>
+                <option value="390000">高知県</option>
+            </optgroup>
+            <optgroup label="九州沖縄">
+                <option value="400000">福岡県</option>
+                <option value="410000">佐賀県</option>
+                <option value="420000">長崎県</option>
+                <option value="430000">熊本県</option>
+                <option value="440000">大分県</option>
+                <option value="450000">宮崎県</option>
+                <option value="460100">鹿児島県</option>
+                <option value="471000">沖縄県</option>
+            </optgroup>
+        </select>
+        <span class="select_highlight"></span>
+        <span class="select_selectbar"></span>
+        <label class="select_selectlabel">気象情報を確認する都道府県を選んでください</label>
+    </div>
+    <br>
+
+    <table border="1">
+        <tr>
+            <th colspan="2" class="none"></th>
+            <th colspan="4" id="today" class="row">ー</th>
+            <th colspan="4" id="tomorrow" class="row">ー</th>
+        </tr>
+
+        <tr>
+            <th rowspan="2" colspan="2" class="col">天気</th>
+            <td colspan="4"><img id="td_w_img"></td>
+            <td colspan="4"><img id="tm_w_img"></td>
+        </tr>
+
+        <tr>
+            <td colspan="4" id="td_w">ー</td>
+            <td colspan="4" id="tm_w">ー</td>
+        </tr>
+
+        <tr>
+            <th rowspan="2" class="col">気温</th>
+            <th class="col">最高(℃)</th>
+            <td colspan="4" id="td_t_h">ー</td>
+            <td colspan="4">ー</td>
+        </tr>
+        <tr>
+            <th class="col">最低(℃)</th>
+            <td colspan="4" id="td_t_l">ー</td>
+            <td colspan="4">ー</td>
+        </tr>
+
+        <tr>
+            <th colspan="2" rowspan="2" class="col">降水確率(%)</th>
+            <td>00-06</td>
+            <td>06-12</td>
+            <td>12-18</td>
+            <td>18-24</td>
+            <td>00-06</td>
+            <td>06-12</td>
+            <td>12-18</td>
+            <td>18-24</td>
+        </tr>
+
+        <tr>
+            <td id="1">ー</td>
+            <td id="2">ー</td>
+            <td id="3">ー</td>
+            <td id="4">ー</td>
+            <td id="5">ー</td>
+            <td id="6">ー</td>
+            <td id="7">ー</td>
+            <td id="8">ー</td>
+        </tr>
+
+    </table>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
